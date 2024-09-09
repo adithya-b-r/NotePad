@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Edit File</title>
+</head>
+
+<body>
+  <div class="main w-full min-h-screen bg-zinc-900 p-10 text-white">
+    <a class="text-blue-500 inline-block mb-10" href="/">Go Back to Home</a>
+    <form action="/editFile" method="post">
+      <input type="hidden" value="<%= fileName %>" name="previousName">
+      <input class="block rounded-md w-full outline-none px-5 py-2 bg-zinc-800" value="<%= fileName %>" type="text"
+        placeholder="Previous Name" name="title">
+      <textarea class="block rounded-md w-full outline-none px-5 py-2 mt-2 bg-zinc-800 resize-none"
+      rows="15"
+        placeholder="Write your task" name="details"><%= fileContent %></textarea>
+      <input class="mt-4 bg-yellow-600 px-5 py-2 rounded-md cursor-pointor font-medium" type="submit" value="Update Task">
+    </form>
+  </div>
+</body>
+
+</html>

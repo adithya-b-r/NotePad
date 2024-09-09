@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-  <title>Part 7</title>
+  <title>NotePad</title>
 </head>
 
 <body>
@@ -19,13 +19,18 @@
         <input class="mt-4 bg-blue-600 px-5 py-2 rounded-md" type="submit" value="Create Task">
       </form>
     </div>
-    <div class="tasks flex flex-wrap gap-3 p-10">
+    <div class="tasks flex flex-wrap gap-3 p-10 w-full">
 
       <% if(files.length> 0){ %>
         <% files.forEach(function(val){ %>
-          <div class="task min-w-80 px-3 py-4 bg-zinc-800 rounded-md">
-            <h1 class="text-white text-3xl tracking-tighter"><%= val%></h1>
-            <a class="text-blue-500 inline-block mt-3" href="">Read More...</a>
+          <div class="task min-w-72 px-3 py-4 bg-zinc-800 rounded-md">
+            <h1 class="text-white text-3xl tracking-tighter">
+              <%= val%>
+            </h1>
+            <div class="flex justify-between items-center mt-3">
+              <a class="text-blue-500 inline-block" href="/file/<%= val %>">Read More</a>
+              <a class="text-green-600 inline-block" href="/edit/<%= val %>">Edit</a>
+            </div>
           </div>
           <% }) %>
             <% } else { %>
