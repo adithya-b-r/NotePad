@@ -27,7 +27,7 @@ app.get('/file/:filename', function(req, res){
     if(err){
       console.error("File Not Found : "+err)
     }else{
-      res.render("show", {fileName: req.params.filename, fileContent: fileData})
+      res.render("view", {fileName: req.params.filename, fileContent: fileData})
     }
   })
 })
