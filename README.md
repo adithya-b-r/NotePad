@@ -32,7 +32,7 @@ A simple web-based note-taking app built with Node.js, Express, EJS, and Tailwin
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/notepad.git
+    git clone https://github.com/adithya-b-r/NotePad.git
     cd notepad
     ```
 
